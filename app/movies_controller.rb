@@ -30,7 +30,7 @@ end
 def can_be_created_in_a_block(args = {})
   Movie.create do |m|
     args.each do |key, value|
-      m[key] = value 
+      m[key] = value
     end
   end
 end
