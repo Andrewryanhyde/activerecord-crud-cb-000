@@ -23,11 +23,9 @@ def can_be_created_with_a_hash_of_attributes
 end
 
 def can_be_created_in_a_block(args = {})
-  Movie.create do |m|
-    args.each do |key, value|
-      m[key] = value
-    end
-  end
+  movie = Movie.create do |m|
+    m.title = title 
+    m.release_date = year
 end
 
 def can_get_the_first_item_in_the_database
